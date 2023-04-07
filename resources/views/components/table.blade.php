@@ -18,6 +18,7 @@
 
             @foreach($columns as $column)
                 <x-livewire-powergrid::cols
+                    :tableName="$tableName"
                     :column="$column"
                     :theme="$theme"
                     :multiSort="$multiSort"

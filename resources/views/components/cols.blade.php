@@ -8,6 +8,7 @@
     'enabledFilters' => null,
     'actions' => null,
     'dataField' => null,
+    'tableName' => null,
 ])
 @php
     $field = filled($column->dataField) ? $column->dataField : $column->field;
@@ -23,7 +24,7 @@
             $theme->cols->divClass
         ])
          style="{{ $theme->cols->divStyle }}"
-        @if($column->sortable) wire:click="sortBy('{{ $field }}')" @endif>
+        @if($column->sortable) data-cy="pg-sortBy-{{ $tableName }}-{{ $field }}" wire:click="sortBy('{{ $field }}')" @endif>
         @if($column->sortable)
             <span>
                 @if($multiSort && array_key_exists($field,$sortArray))

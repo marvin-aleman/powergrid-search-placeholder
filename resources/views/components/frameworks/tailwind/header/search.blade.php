@@ -7,6 +7,7 @@
                  </span>
               </span>
             <input wire:model.debounce.700ms="search" type="text"
+                   data-cy="pg-search-{{ $tableName }}"
                    class="{{ $theme->searchBox->inputClass }}"
                    style="{{ $theme->searchBox->inputStyle }}"
                    placeholder="{{ trans('livewire-powergrid::datatable.placeholders.search') }}">
