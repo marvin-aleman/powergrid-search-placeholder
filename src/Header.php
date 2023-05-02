@@ -8,7 +8,7 @@ final class Header
 
     public bool $searchInput = false;
 
-    public bool $searchPlaceholder;
+    public string $searchPlaceholder;
 
     public bool $toggleColumns = false;
 
