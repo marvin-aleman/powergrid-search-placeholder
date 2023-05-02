@@ -9,7 +9,7 @@
               </span>
                 <input wire:model.debounce.600ms="search" type="text"
                        class="col-12 col-sm-8 form-control livewire_powergrid_input"
-                       placeholder="{{ data_get($setUp, 'header.searchPlaceholder') ?? trans('livewire-powergrid::datatable.placeholders.search') }}">
+                       placeholder="chirlo">
             </div>
         @endif
     </label>
