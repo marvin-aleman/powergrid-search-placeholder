@@ -8,6 +8,8 @@ final class Header
 
     public bool $searchInput = false;
 
+    public bool $searchPlaceholder;
+
     public bool $toggleColumns = false;
 
     public bool $softDeletes = false;
@@ -27,9 +29,13 @@ final class Header
      * @return $this
      * Show search input into component
      */
-    public function showSearchInput(): Header
+    public function showSearchInput(string $placeholder = null): Header
     {
         $this->searchInput = true;
+
+		if($placeholder){
+			$this->searchPlaceholder = $placeholder;
+		}
 
         return $this;
     }
